@@ -10,8 +10,19 @@
  * Given an input Array, loop forward over the Array and print its values 
  * using console.log().
  */
+/*
+I: Array
+O: Print values of array to the console
+C: n/a
+E: n/a
+*/
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
+  // For loop to iterate over array
+  // Print values to the console at each index
+  for (var i = 0; i < array.length; i ++){
+    console.log(array[i]);
+  }
   
   
   
@@ -23,9 +34,19 @@ function printArrayValues(array) {
  * Given an input Array, loop backwards over the Array and print its values 
  * using console.log().
  */
+/*
+I: Array
+O: Array values printed to the console in reverse
+C: Must print array values from last to first
+E: n/a
+*/
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
-  
+  // Use for loop to loop backwards over the array
+  // Print each value to the console
+  for (var i = array.length - 1; i >= 0; i --){
+    console.log(array[i]);
+  }
   
   
   
@@ -35,8 +56,18 @@ function printArrayValuesInReverse(array) {
 /** 
  * Given an input Object, return an Array containing the Object keys.
  */
+/*
+I: Object
+O: Array of object keys
+C: n/a
+E: n/a
+*/
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
+  // Use Object.keys method to return kets as an array
+  return Object.keys(object);
+  
+
   
   
   
@@ -48,8 +79,15 @@ function getObjectKeys(object) {
  * Given an input Object, loop over the Object and print its keys 
  * using console.log().
  */
+/*
+I: Object
+O: Print object keys 
+C: n/a
+E: n/a
+*/
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
+  // Use for in loop to print object keys to the 
   
   
   
