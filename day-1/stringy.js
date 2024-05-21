@@ -12,9 +12,15 @@
  * TIP: In JavaScript, how can we decipher the length of a String?
  * work?
  */
+/* 
+I: String
+O: Length of the string 
+C: N/A
+E: N/A
+*/
 function length(string) {
     // YOUR CODE BELOW HERE //
-   
+   return string.length; // Return length of string
     // YOUR CODE ABOVE HERE //
 }
 
@@ -23,9 +29,7 @@ function length(string) {
  */
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
-
-
-
+    return string.toLowerCase();
     // YOUR CODE ABOVE HERE //
 }
 
@@ -34,9 +38,7 @@ function toLowerCase(string) {
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-
-
-
+    return string.toUpperCase();
     // YOUR CODE ABOVE HERE //
 }
 
