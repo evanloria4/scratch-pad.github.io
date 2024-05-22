@@ -21,9 +21,21 @@
  *  b. you'll need a loop, which one is best?
  *  c. you'll wanna make use of the push() method of Array.
  */
+/* 
+I: Two integers
+O: The range of numbers between the integers
+C: Must start with the first integer and iterate backwards if it is the larger
+E: n/a
+*/
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
+    // Create storage array to push data
+    // Use for loop to iterate through range
+    var array = [];
+    for (var i = start; i <= end; i++){
+        array.push(i);
+    }
+    return array;
     
     
     

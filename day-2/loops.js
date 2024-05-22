@@ -109,13 +109,10 @@ E: n/a
 */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  // Create a storage an empty array to push the object values onto
-  var array = [];
-  // Use for in loop to access key-values and push them onto the storage array
-for (var key in object){
-  array.push(object[key]);
-}
-return array;
+  // Use Object.values to create an aray of the object's values
+  return Object.values(object);
+
+
 }
   // YOUR CODE ABOVE HERE //
 
@@ -123,11 +120,22 @@ return array;
  * Given an input Object, loop over the Object and print its values 
  * using console.log().
  */
+/* 
+I: Object
+O: Print objects values to the console
+C: n/a
+E: n/a
+*/
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
+  // Create a storage array
+  // Set storage array equal to Object.values 
+  // Use for loop to print values to the console
+var valuesArr = Object.values(object);
+for (var i = 0; i < valuesArr.length; i ++){
+  console.log(valuesArr[i]);
+}
+  return valuesArr;
   
   // YOUR CODE ABOVE HERE //
 }
@@ -143,6 +151,10 @@ E:
 */
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
+  // Set new array equal to Object.keys
+  // Return the length of the storage array
+  var array = Object.keys(object);
+  return array.length
   
   
   
@@ -162,7 +174,14 @@ E: n/a
 */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
+  // Set storage array equal to Object.values
+  // Use for loop to iterate backwards through storage array
+  // Print values in reverse to the console
+  var values = Object.values(object);
+  for (var i = values.length - 1; i >= 0; i --){
+    console.log(values[i]);
+  }
+  return values;
   
   
   
