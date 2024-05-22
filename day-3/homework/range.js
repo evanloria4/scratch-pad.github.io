@@ -32,10 +32,17 @@ function range(start, end) {
     // Create storage array to push data
     // Use for loop to iterate through range
     var array = [];
-    for (var i = start; i <= end; i++){
-        array.push(i);
-    }
-    return array;
+    if (start < end){
+        for (var i = start; i <= end; i++){
+         array.push(i);
+       }
+      }
+        else {
+          for (var i = start; i >= end; i --){
+            array.push(i);
+          }
+        }
+   return array
     
     
     
