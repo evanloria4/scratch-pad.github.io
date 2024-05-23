@@ -61,15 +61,15 @@ function createLessThanFilter(base) {
 /* 
 I: Character
 O: Function that tests whether a string starts with that character
-C: n/a
+C: Case insensitive
 E: n/a
 */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
     // Return a function
-    // Compare whether startsWith === string[0]
+    // Force first character of string and startsWith character to lowercase
     return function(string){
-        return string[0] === startsWith;
+        return string[0].toLowerCase() === startsWith.toLowerCase();
     }
     
     
@@ -83,8 +83,19 @@ function createStartsWithFilter(startsWith) {
  * Function that tests whether a given String ends with the endsWith 
  * character.
  */
+/*
+I: Character
+O: Function that tests if given string starts with the same character
+C: Case insensitive
+E: n/a
+*/
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
+    // Return a function
+    // Force string[0] and endsWith toLowerCase()
+    return function(string){
+        return string[string.length - 1].toLowerCase() === endsWith.toLowerCase();
+    }
     
     
     
@@ -142,8 +153,9 @@ E: n/a
 */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
-    // Use for loop to test whether each string in the array passes the functions test
-    // Return true if yes
+    // Use if conditional and every() method to test whether each element of the array passes the test
+    // Return true if so
+    // Otherwise, return false
     if (strings.every(test) === true){
         return true;
     }

@@ -14,9 +14,23 @@
  * 
  * HINT: There is a method that can help with this.
  */
+/*
+I: Value
+O: Return true or false
+C: n/a
+E: n/a
+*/
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
+    // Use if-conditional and isArray() method to test whetehr given value is an array
+    // Return true if so
+    // Otherwise, return false
+if (Array.isArray(value) === true){
+    return true;
+}
+    else {
+        return false;
+    }
     
     
     
@@ -32,10 +46,32 @@ function isArray(value) {
  * with typeof.
  * 
  */
+/* 
+I: Value 
+O: Return true or false
+C: n/a
+E: n/a
+*/
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
-
+    // Use typeof method to determine what kind of data value is 
+    // Need to first eliminate other types that will return true for object 
+    // Eliminate array types
+    if (Array.isArray(value) === true){
+        return false;
+    }  // Eliminate null types
+    else if (value === null){
+        return false;
+    } // Eliminate Date types
+    else if (value instanceof Date === true){  
+        return false;
+    } // Test true for true object types
+    else if (typeof value === 'object'){
+        return true;
+    } // Eliminate any other data types that aren't objects
+    else {
+        return false;
+    }
     
     
     // YOUR CODE ABOVE HERE //
@@ -49,8 +85,32 @@ function isObject(value) {
  * 
  * TIP: Similar to isObject, but we must return true if the value is an Array.
  */
+/*
+I: Value
+O: Return boolean value 
+C: 
+E:
+*/
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
+    // If conditional to test for typeof 
+    // Eliminate non-object objects of null and Date
+    if (value instanceof Date === true){
+        return false;
+    }
+    else if (value === null){
+        return false;
+    } // Use Array.isArray to test for arrays
+    else if (Array.isArray(value) === true){
+        return true;
+    } // Use typeof to test for objects
+    else if (typeof value === 'object'){
+        return true;
+    } // Any other returns for typeof should return false
+    // This will eliminate 'string', 'number', and other typeof returns
+    else {
+        return false;
+    }
     
     
     
