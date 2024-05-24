@@ -111,11 +111,7 @@ function isCollection(value) {
     else {
         return false;
     }
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+     // YOUR CODE ABOVE HERE //
 }
 
 /**
@@ -137,8 +133,29 @@ function isCollection(value) {
  *    typeOf("javascript") -> "string"
  *    typeOf([1,2,3]) -> "array"
  */ 
+/* 
+I: Value
+O: Return type of value as a string
+C: n/a
+E: n/a
+*/
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
+    // Use typeof to return type of value as a string
+    // Eliminate non object objects
+    // Have arrays return 'array'
+    if (Array.isArray(value) === true){
+        return 'array';
+    } // Have null return 'null'
+    else if (value === null){
+        return 'null';
+    } // Have Date return 'date'
+    else if (value instanceof Date === true){
+        return 'date';
+    }
+    else {
+        return typeof value;
+    }
     
     
     
